@@ -1,0 +1,61 @@
+class Calculator {
+  
+  /** 
+   * @param {number} value
+   */
+  constructor(value) {
+      this.result = value;
+  }
+
+  /** 
+   * @param {number} value
+   * @return {Calculator}
+   */
+  add(value){
+      let c = new Calculator(this.result+value)
+      return c;
+  }
+
+  /** 
+   * @param {number} value
+   * @return {Calculator}
+   */
+  subtract(value){
+      let c = new Calculator(this.result-value)
+      return c;
+  }
+
+  /** 
+   * @param {number} value
+   * @return {Calculator}
+   */  
+  multiply(value) {
+      let c = new Calculator(this.result*value)
+      return c;
+  }
+
+  /** 
+   * @param {number} value
+   * @return {Calculator}
+   */
+  divide(value) {
+    let c = new Calculator(value===0?"Division by zero is not allowed":this.result/value);
+      return c;
+  }
+  
+  /** 
+   * @param {number} value
+   * @return {Calculator}
+   */
+  power(value) {
+    let c = new Calculator(Math.pow(this.result,value));
+      return c;
+  }
+    
+  /** 
+   * @return {number}
+   */
+  getResult() {
+      return this.result;
+  }
+}

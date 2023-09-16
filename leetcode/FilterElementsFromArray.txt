@@ -1,0 +1,10 @@
+/**
+ * @param {number[]} arr
+ * @param {Function} fn
+ * @return {number[]}
+ */
+var filter = function(arr, fn) {
+    arr2 = [];
+    arr.forEach((i) => {if (fn(i,arr.indexOf(i))) arr2.push(i)});
+    return arr2;
+};
